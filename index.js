@@ -12,7 +12,9 @@ exports.handler = function(event, context) {
   var itemParams = {Item: {email: {S: Snsuseremail},
   token: {S: ResetToken}, ttl : {N: ttl}}};
   var sourceadd = process.env.SOURCEADD;
+  console.log( "SourceAdd " + sourceadd)
   var domain_name = process.env.DOMAIN;
+  console.log( "DOMAIN " + domain_name)
   // ddb.putItem(itemParams, function() {
   //   context.done(null,'');
   // });
